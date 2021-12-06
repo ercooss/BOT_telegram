@@ -51,14 +51,14 @@ console.log(jres1);
 );
     bot.sendMessage(
          msg.chat.id,
-           `nilai p yang diprediksi adalah ${jresi(1)} watt`
+           `nilai p yang diprediksi adalah ${jres1(1)} watt`
 );
     bot.sendMessage(
           msg.chat.id,
             `Klasifikasi Tegangan ${jres2}`
-);  
+            );
+        state = 0;
         })
-    state = 0;
    })
 }else{
     bot.sendMessage(
