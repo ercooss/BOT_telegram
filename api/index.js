@@ -51,7 +51,7 @@ console.log(jres1);
 );
     bot.sendMessage(
          msg.chat.id,
-           `nilai p yang diprediksi adalah ${jres1(1)} watt`
+           `nilai p yang diprediksi adalah ${jres1[1]} watt`
 );
     bot.sendMessage(
           msg.chat.id,
