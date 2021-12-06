@@ -45,16 +45,16 @@ console.log(jres1);
     cls_model.classify([parseFloat(s[0]), parseFloat(s[1]), parseFloat(jres1[0]), parseFlout (jres1[1])]).then((jres2) => {
     bot.sendMessage(
          msg.chat.id,
-         'nilai yang diprediksi adalah ${jres1[0]} volt'
+         `nilai yang diprediksi adalah ${jres1[0]} volt`
 
 );
     bot.sendMessage(
          msg.chat.id,
-           'nilai p yang diprediksi adalah ${jresi(1)} watt'
+           `nilai p yang diprediksi adalah ${jresi(1)} watt`
 );
     bot.sendMessage(
           msg.chat.id,
-            'Klasifikasi Tegangan ${jres2}'
+            `Klasifikasi Tegangan ${jres2}`
 );  
         })
     state = 0;
@@ -62,7 +62,7 @@ console.log(jres1);
 }else{
     bot.sendMessage(
          msg.chat.id,
-         'Please Click /start'
+         `Please Click /start`
     );
 state = 0;
     };
