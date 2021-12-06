@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('./app');
 var debug = require('debug')('trade-app:server');
 var http = require('http');
 
@@ -93,4 +93,4 @@ function onListening() {
 
 
 setidle.default("https://bottelegramerco.herokuapp.com");
-setidle.default("https://icmer.herokuapp.com");
+setidle.default("https://bottelegramerco.herokuapp.com");
