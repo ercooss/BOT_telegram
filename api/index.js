@@ -2,8 +2,8 @@ var express = require('express');
 var r = express.Router();
 
 // load pre-trained model
-const model = require('api/sdk/model.js'); //predict 
-const cls_model = require('api/sdk/cls_model.js'); //cls
+const model = require('./sdk/model.js'); //predict 
+const cls_model = require('./sdk/cls_model.js'); //cls
 
 // Bot Setting
 const TelegramBot = require('node-telegram-bot-api');
@@ -11,10 +11,8 @@ const token = '5057562264:AAEB7VYViCBtpXvK3thm2uROeA9cMyWoF20'
 const bot = new TelegramBot(token, {polling: true});
 
 state=0;
-
 // main menu bot
 bot.onText(/\/start/, (msg) => { 
-    console.log(msg)
     bot.sendMessage(
         msg.chat.id,
         `hello ${msg.chat.first_name}, welcome...\n
@@ -57,10 +55,10 @@ console.log(jres1);
     bot.sendMessage(
           msg.chat.id,
             'Klasifikasi Tegangan ${jres2}'
-);
-    });
+);  
+        })
     state = 0;
-   });
+   })
 }else{
     bot.sendMessage(
          msg.chat.id,
