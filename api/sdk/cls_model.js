@@ -10,9 +10,9 @@ function normalized(data){ // i & r
 
 
 const argFact = (compareFn) => (array) => array.map((el,idx) => [el,idx]).reduce(compareFn)[1]
-const argMax  = argFact((min,el) => ( el[0] > min(0) ? el:min))
+const argMax  = argFact((min,el) => ( el[0] > min[0] ? el:min))
 
-function ArgMax(res){
+function argMax(res){
   label = "NORMAL"
   cls_data = []
   for(i=0; i<res.length; i++){
@@ -46,7 +46,7 @@ async function classify(data){
                 tf_data
         );
         result = predict.dataSync();
-        return ArgMax( result );
+        return argMax( result );
         
     }catch(e){
       console.log(e);
