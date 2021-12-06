@@ -13,6 +13,7 @@ const bot = new TelegramBot(token, {polling: true});
 state=0;
 // main menu bot
 bot.onText(/\/start/, (msg) => { 
+    console.log(msg)
     bot.sendMessage(
         msg.chat.id,
         `hello ${msg.chat.first_name}, welcome...\n
@@ -65,8 +66,8 @@ console.log(jres1);
          `Please Click /start`
     );
 state = 0;
-    };
-});
+    }
+})
 
 // routers
 r.get('/predict/:i/:r', function(req, res, next) {    
@@ -78,7 +79,7 @@ r.get('/predict/:i/:r', function(req, res, next) {
     ).then((jres)=>{
         res.json(jres);
     })
-})
+});
 
 // routers
 r.get('/Classify/:i/:r', function(req, res, next) {    
@@ -95,7 +96,7 @@ r.get('/Classify/:i/:r', function(req, res, next) {
             parseFloat(jres[0]), 
             parseFloat(jres[1])
             ]
-      ).then((jres)=>{
+      ).then((jres_)=>{
          res.json({jres,jres_});  
     })
         })
