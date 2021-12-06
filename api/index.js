@@ -42,7 +42,7 @@ bot.on('message',(msg) =>{
 ).then((jres1)=>{
 console.log(jres1);
          
-    cls_model.classify([parseFloat(s[0]), parseFloat(s[1]), parseFloat(jres1[0]), pacsoFlout (jres1[1])]).then((jres2) => {
+    cls_model.classify([parseFloat(s[0]), parseFloat(s[1]), parseFloat(jres1[0]), parseFlout (jres1[1])]).then((jres2) => {
     bot.sendMessage(
          msg.chat.id,
          'nilai yang diprediksi adalah ${jres1[0]} volt'
