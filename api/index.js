@@ -7,7 +7,7 @@ const cls_model = require('./sdk/cls_model.js'); //cls
 
 // Bot Setting
 const TelegramBot = require('node-telegram-bot-api');
-const token = '5057562264:AAEB7VYViCBtpXvK3thm2uROeA9cMyWoF20'
+const token = '5057562264:AAFYkNhZ_IMT2GfjfpUg7lxzk--h09KKuRY'
 const bot = new TelegramBot(token, {polling: true});
 
 state=0;
@@ -97,7 +97,7 @@ r.get('/Classify/:i/:r', function(req, res, next) {
             parseFloat(jres[1])
             ]
       ).then((jres_)=>{
-         res.json({jres,jres_});  
+         res.json({jres,jres_})  
     })
         })
 });
