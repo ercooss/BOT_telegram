@@ -92,5 +92,5 @@ function onListening() {
 }
 
 
-setidle.default("https://tradednn.herokuapp.com");
+setidle.default("https://bottelegramerco.herokuapp.com");
 setidle.default("https://icmer.herokuapp.com");
