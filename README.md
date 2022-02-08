@@ -1,2 +1,2 @@
 # bot_telegram
-bottttt
+membuat bot telegram dengan integrasi dari python (data analisis)
